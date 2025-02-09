@@ -27,7 +27,7 @@ import ResetPassword from "./pages/ResetPassword";
 import ForgotPassword from "./pages/ForgotPassword";
 import AccountActivation from "./pages/AccountActivation";
 
-axios.defaults.baseURL = "http://localhost:4000/api/"
+axios.defaults.baseURL = "https://ecommerce-backend-5940.onrender.com/api/"
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>

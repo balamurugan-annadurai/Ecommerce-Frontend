@@ -7,6 +7,7 @@ import * as yup from "yup";
 import Cookies from "js-cookie";
 import axios from "axios";
 import toast from "react-hot-toast";
+import ReactLoading from 'react-loading';
 
 const Checkout = () => {
   const state = useSelector((state) => state.handleCart);
@@ -102,7 +103,9 @@ const Checkout = () => {
         handleBooking(values)
       }
     });
-    if (loading) return <div>Loading...</div>
+    if (loading) return <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "60vh" }}>
+      <ReactLoading type="spinningBubbles" color="#000" />
+    </div>
 
     return (
       <div className="container py-2">
@@ -296,7 +299,9 @@ const Checkout = () => {
     }
   }, [navigate]);
 
-  if (isLoading) return <div>Loading...</div>;
+  if (isLoading) return <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "80vh" }}>
+    <ReactLoading type="spinningBubbles" color="#000" />
+  </div>
 
   return (
     <>

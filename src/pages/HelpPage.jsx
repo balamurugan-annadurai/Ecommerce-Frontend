@@ -4,6 +4,7 @@ import axios from "axios";
 import { useFormik } from "formik";
 import * as yup from "yup"
 import toast from "react-hot-toast";
+import ReactLoading from 'react-loading';
 
 const HelpPage = () => {
   const [isLoading, setIsLoading] = useState(false)
@@ -45,7 +46,9 @@ const HelpPage = () => {
   if (isLoading) return (
     <>
       <Navbar />
-      <div>Loading...</div>
+      <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "80vh" }}>
+        <ReactLoading type="spinningBubbles" color="#000" />
+      </div>
     </>
   )
   return (

@@ -6,6 +6,7 @@ import * as yup from "yup"
 import axios from "axios";
 import Cookies from "js-cookie"
 import toast from "react-hot-toast";
+import ReactLoading from 'react-loading';
 
 const Login = () => {
   const navigate = useNavigate();
@@ -53,7 +54,9 @@ const Login = () => {
   if (isLoading) return (
     <>
       <Navbar />
-      <div>Loading...</div>
+      <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "80vh" }}>
+        <ReactLoading type="spinningBubbles" color="#000" />
+      </div>
     </>
   )
   return (

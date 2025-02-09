@@ -5,6 +5,7 @@ import { useFormik } from 'formik';
 import * as yup from "yup"
 import axios from 'axios';
 import toast from 'react-hot-toast';
+import ReactLoading from 'react-loading';
 
 const Register = () => {
     const [isLoading, setIsLoading] = useState(false);
@@ -65,8 +66,9 @@ const Register = () => {
     if (isLoading) return (
         <>
             <Navbar />
-            <div>Loading...</div>
-        </>
+            <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "80vh" }}>
+                <ReactLoading type="spinningBubbles" color="#000" />
+            </div>        </>
     )
     if (showConformMsg) return (
         <>

@@ -5,6 +5,7 @@ import "./style.css"
 import Cookies from "js-cookie"
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
+import ReactLoading from 'react-loading';
 
 const Profile = () => {
     const [isLoading, setIsLoading] = useState(false);
@@ -26,7 +27,9 @@ const Profile = () => {
         }
     }, [navigate])
 
-    if (isLoading) return <div>Loading...</div>
+    if (isLoading) return <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100vh" }}>
+        <ReactLoading type="spinningBubbles" color="#000" />
+    </div>
     return (
         <>
             <Navbar />
