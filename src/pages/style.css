@@ -1,0 +1,20 @@
+.user-profile {
+    min-height: 90vh;
+    max-height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.user_profile-img {
+    width: 200px;
+    margin-top: 10px;
+}
+
+.user_profile-img img {
+    width: 100%;
+}
+
+.user_profile_content h2 {
+    font-size: 30px;
+}
